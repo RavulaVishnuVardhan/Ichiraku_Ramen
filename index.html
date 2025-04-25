@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ichiraku Ramen - Konoha's Best!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Logo.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./Logo.png" alt="Ichiraku Ramen Logo">
+                <h1>Ichiraku Ramen</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>     
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="promotion-banner">
+        <div class="container">
+            <p>🔥🔥 Limited Time Offer! Get a FREE side of Gyoza with any Ramen order this weekend!</p>
+            </div>
+    </div>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>The Taste of Konoha, Right Here!</h2>
+                    <p>Experience the legendary ramen that Naruto Uzumaki can't get enough of. Fresh ingredients, authentic recipes, and a whole lot of flavor!</p>
+                    <a href="#menu" class="button">View Our Menu</a>
+                    <br>
+                    <br>
+                    <a href="#reservations" class="button">Book a reservation</a>
+                </div>
+                <div class="hero-image">
+                    <img src="./Ramen_Bowl.gif" alt="Delicious Ramen Bowl">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section">
+            <div class="container">
+                <h2>Our Delicious Ramen</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="./Miso Ramen.jpeg" alt="Miso Ramen" class="menu-item-image">
+                        <h3>Miso Ramen</h3>
+                        <p class="description">Rich and savory miso broth with tender chashu pork, bamboo shoots, and green onions.</p>
+                        <span class="price">$9.50</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./Shoyu Ramen.jpeg" alt="Shoyu Ramen" class="menu-item-image">
+                        <h3>Shoyu Ramen</h3>
+                        <p class="description">Classic soy sauce-based broth with nori seaweed, marinated egg, and narutomaki.</p>
+                        <span class="price">$8.75</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./Tonkotsu Ramen.jpeg" alt="Tonkotsu Ramen" class="menu-item-image">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p class="description">Creamy pork bone broth with wood ear mushrooms, pickled ginger, and a drizzle of sesame oil.</p>
+                        <span class="price">$10.25</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./Spicy Miso Ramen.jpeg" alt="Spicy Miso Ramen" class="menu-item-image">
+                        <h3>Spicy Miso Ramen</h3>
+                        <p class="description">Our signature miso ramen with a fiery kick! Contains chili paste and a sprinkle of red pepper flakes.</p>
+                        <span class="price">$9.75</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./Vegetarian Ramen.jpeg" alt="Vegetarian Ramen" class="menu-item-image">
+                        <h3>Vegetarian Ramen</h3>
+                        <p class="description">A flavorful vegetable broth with tofu, corn, spinach, and bean sprouts.</p>
+                        <span class="price">$8.00</span>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./Naruto Special!.jpeg" alt="Naruto Special!" class="menu-item-image">
+                        <h3>Naruto Special!</h3>
+                        <p class="description">A hearty bowl with extra chashu, a double serving of narutomaki, and a smile from Teuchi!</p>
+                        <span class="price">$11.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section bg-light">
+            <div class="container">
+                <h2>About Ichiraku Ramen</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="./Chef.jpeg" alt="Teuchi - The Ramen Guy">
+                    </div>
+                    <div class="about-text">
+                        <p>For generations, Ichiraku Ramen has been a beloved spot in the Hidden Leaf Village. Founded by the legendary Teuchi, our humble shop has served countless ninja and villagers, including the spirited Naruto Uzumaki.</p>
+                        <p>We pride ourselves on using the freshest, locally sourced ingredients and time-honored family recipes. Each bowl of ramen is made with care and a passion for delivering an authentic and delicious experience.</p>
+                        <p>More than just a place to eat, Ichiraku is a gathering spot, a place for friends to connect, and a symbol of the warmth and community of Konoha.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservations" class="section bg-light">
+            <div class="container">
+                <h2>Book Your Table</h2>
+                <p>While walk-ins are always welcome, you can reserve a table for larger groups or special occasions.</p>
+                <form class="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests:</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5+ Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Requests (Optional):</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="button">Request Reservation</button>
+                </form>
+                <p class="disclaimer">Note: This reservation form is for demonstration purposes only and does not guarantee a booking.</p>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="review-grid">
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="./Naruto.jpeg" alt="Avatar 1" class="avatar-placeholder">
+                            <p class="reviewer">Naruto Uzumaki</p>
+                        </div>
+                        <blockquote class="review-text">
+                            Believe it! Ichiraku's miso ramen is the best! I could eat it every day!
+                        </blockquote>
+                    </div>
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="./Sasuke.jpeg" alt="Avatar 3" class="avatar-placeholder">
+                            <p class="reviewer">Sasuke Uchiha</p>
+                        </div>
+                        <blockquote class="review-text">
+                            ...Hn. It's not bad. The tonkotsu has a decent flavor.
+                        </blockquote>
+                    </div>
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="./Sakura.jpeg" alt="Avatar 2" class="avatar-placeholder">
+                            <p class="reviewer">Sakura Haruno</p>
+                        </div>
+                        <blockquote class="review-text">
+                            The broth is so rich and flavorful. It always hits the spot after a long day of training.
+                        </blockquote>
+                    </div>
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="./Kakashi.jpeg" alt="Avatar 4" class="avatar-placeholder">
+                            <p class="reviewer">Kakashi Hatake</p>
+                        </div>
+                        <blockquote class="review-text">
+                            The perfect place to unwind with a bowl of ramen and my favorite book.
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Visit Us!</h2>
+                <div class="contact-details">
+                    <p><strong>Address:</strong> Konohagakure (Hidden Leaf Village)</p>
+                    <p><strong>Hours:</strong> Always Open (for hungry ninjas!)</p>
+                    <p><strong>Phone:</strong> (555) ICHIRAKU</p>
+                    <p><strong>Email:</strong> ichiraku@konoha.ninja</p>
+                </div>
+                <div class="map">
+                    <img src="./Location.jpeg" alt="Map of Konoha (Placeholder)">
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>What are your opening hours?</summary>
+                        <p>We are open from 11:00 AM to 10:00 PM, seven days a week.</p>
+                    </details>
+                    <details>
+                        <summary>Do you offer vegetarian options?</summary>
+                        <p>Yes, we have a delicious Vegetarian Ramen on our menu, along with other customizable options. Please ask our staff.</p>
+                    </details>
+                    <details>
+                        <summary>Can I make a reservation?</summary>
+                        <p>Yes, you can make a reservation through the form on our Reservations page or by calling us directly.</p>
+                    </details>
+                    <details>
+                        <summary>Do you offer delivery services?</summary>
+                        <p>Currently, we do not offer delivery services. We only provide dine-in and takeaway options.</p>
+                    </details>
+                    <details>
+                        <summary>Where are you located?</summary>
+                        <p>We are located at Konohagakure. Please see the map on our Contact page for more details.</p>
+                    </details>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ichiraku Ramen. All rights reserved. | A Fan-Made Tribute</p>
+        </div>
+    </footer>
+
+</body>
+</html>
