@@ -16,7 +16,6 @@ body {
 header {
     background-color: transparent; /* Make the background transparent */
     padding: 15px 0;
-    border-bottom: 3px solid #b2ebf2;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -66,7 +65,7 @@ nav ul li a {
     font-weight: bold;
     font-size: 0.9em;
     position: relative; /* For positioning the pseudo-element */
-    padding: 8px 10px; /* Add some padding */
+    padding: 8px 0; /* Add some padding */
     display: inline-block; /* Allows width control but stays inline */
 }
 
@@ -575,9 +574,9 @@ footer .container {
     }
 
     nav ul {
-        flex-direction: row; /* Display navigation items in a row */
+        flex-direction: column; /* Display navigation items in a row */
         align-items: center; /* Vertically align items */
-        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        overflow-y: auto; /* Enable horizontal scrolling if needed */
         white-space: nowrap; /* Prevent links from wrapping */
         margin-left: 20px; /* Add some space between logo and nav */
     }
