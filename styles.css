@@ -16,15 +16,14 @@ body {
 header {
     background-color: transparent; /* Make the background transparent */
     padding: 15px 0;
-    position: static;
-    border-bottom: 3px solid #b2ebf2;
+    position: sticky;
     top: 0;
     z-index: 100;
 }
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the start (left) */
     align-items: center;
     background-color: rgba(224, 242, 247, 0.8); /* Light Teal with 80% opacity */
     padding: 15px 20px; /* Adjust padding as needed */
@@ -34,6 +33,7 @@ header .container {
 .logo {
     display: flex;
     align-items: center;
+    margin-right: auto; /* Push the logo and subsequent elements to the left */
 }
 
 .logo img {
@@ -87,6 +87,36 @@ nav ul li a:hover {
 
 nav ul li a:hover::before {
     width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: #1976d2;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animate to 'X' when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Promotion Banner Styles */
@@ -558,42 +588,77 @@ footer .container {
 }
 
 /* Responsive Design */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-
     header .container {
-        flex-direction: row; /* Change to row to align logo and nav horizontally */
-        align-items: center; /* Vertically align logo and nav */
-        text-align: left; /* Align text to the left */
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: space-between; /* Space out the logo and nav */
+        align-items: center; /* Vertically align */
     }
 
     .logo {
-        margin-bottom: 0; /* Remove bottom margin to be in line with nav */
         margin-right: auto; /* Push logo to the left */
     }
 
-    nav ul {
-        flex-direction: column; /* Display navigation items in a row */
-        align-items: center; /* Vertically align items */
-        overflow-y: auto; /* Enable horizontal scrolling if needed */
-        white-space: nowrap; /* Prevent links from wrapping */
-        margin-left: 20px; /* Add some space between logo and nav */
+    nav {
+        order: -1; /* Move the nav (containing the hamburger) to the beginning */
     }
 
-    nav ul li {
-        margin: 0 10px; /* Adjust horizontal spacing between links */
+    #nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: rgba(224, 242, 247, 0.95);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+        z-index: 100; /* Ensure it's above other content */
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
     }
 
-    nav ul li:first-child {
-        margin-left: 0; /* Remove left margin for the first link */
+    #nav-menu.show {
+        transform: translateX(0);
+        opacity: 1;
     }
 
-    /* You might need to adjust the padding of the links */
-    nav ul li a {
-        padding: 8px 8px; /* Adjust padding for smaller screens */
-        font-size: 0.85em; /* Slightly smaller font size if needed */
+    .close-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.8em;
+        color: #333;
+        cursor: pointer;
+        z-index: 10; /* Ensure it's above the menu items */
+        padding: 5px; /* Add some touch area */
+    }
+
+    .close-button:hover {
+        color: #d84315; /* Change color on hover */
+    }
+
+    #nav-menu li {
+        padding: 15px 20px;
+        opacity: 0; /* Initially hidden */
+        transform: translateX(-20px); /* Start slightly to the left */
+        animation: fadeIn 0.3s ease-out forwards; /* Apply fade-in animation */
+    }
+
+    #nav-menu.show li {
+        opacity: 1; /* Ensure they become visible when menu is shown */
+        transform: translateX(0); /* Move to their final position */
+    }
+
+    .hamburger {
+        display: flex; /* Ensure hamburger is visible */
+        margin-right: 20px; /* Add some space between hamburger and logo */
     }
 
     #hero .container {
