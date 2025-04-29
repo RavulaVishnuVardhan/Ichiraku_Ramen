@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             background-color: #f4f4f4;
@@ -16,7 +18,22 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            font-family: 'Roboto', sans-serif;
+            animation: fadeInBody 1s ease-in;
         }
+
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         .login-container {
             background-color: #fff;
             padding: 30px;
@@ -24,14 +41,57 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             width: 400px;
             text-align: center;
+            animation: slideUp 0.8s ease-out;
         }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         .login-container h2 {
             color: #d84315;
             margin-bottom: 20px;
+            font-family: 'Rock Salt', cursive;
+            animation: fadeInText 1s ease-in 0.2s;
         }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .form-group {
             margin-bottom: 20px;
+            animation: slideIn 0.7s ease-in;
         }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         .form-group label {
             display: block;
             margin-bottom: 5px;
@@ -39,6 +99,7 @@
             font-weight: bold;
             text-align: left;
         }
+
         .form-group input[type="text"],
         .form-group input[type="password"] {
             width: 100%;
@@ -47,14 +108,18 @@
             border-radius: 4px;
             box-sizing: border-box;
             font-size: 1em;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .form-group input[type="text"]:hover,
-        .form-group input[type="password"]:hover {
-            border-color: #1976d2; /* Blue on hover */
-            box-shadow: 0 0 5px rgba(25, 118, 210, 0.5);
-            transition: border-color 0.3s ease;
+
+        .form-group input:hover,
+        .form-group input:focus {
+            border-color: #1976d2;
+            box-shadow: 0 0 8px rgba(25, 118, 210, 0.5);
+            outline: none;
         }
+
         .login-button {
+            display: inline-block;
             background-color: #1976d2;
             color: #fff;
             padding: 12px 20px;
@@ -62,27 +127,39 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1.1em;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             text-decoration: none;
+            margin-top: 10px;
+            animation: fadeInText 1s ease-in 0.3s;
         }
+
         .login-button:hover {
             background-color: #0d47a1;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(13, 71, 161, 0.3);
         }
+
         .signup-link {
             margin-top: 20px;
             font-size: 0.9em;
             color: #555;
+            animation: fadeInText 1s ease-in 0.4s;
         }
+
         .signup-link a {
             color: #ef6c00;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
+
         .signup-link a:hover {
             text-decoration: underline;
+            color: #bf360c;
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h2>Login to Ichiraku Ramen</h2>
